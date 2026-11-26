@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login e Galeria de Fotos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <section id="login-section" class="card login-card">
+      <h1>Login</h1>
+      <form id="login-form" novalidate>
+        <div class="field">
+          <label for="username">Usuário</label>
+          <input type="text" id="username" name="username" autocomplete="username">
+        </div>
+        <div class="field">
+          <label for="password">Senha</label>
+          <input type="password" id="password" name="password" autocomplete="current-password">
+        </div>
+        <p id="login-error" class="message error" role="alert" hidden></p>
+        <button type="submit" id="login-button" class="btn btn-primary">Entrar</button>
+      </form>
+    </section>
+
+    <section id="gallery-section" class="gallery-section" hidden>
+      <header class="gallery-header">
+        <h1>Galeria de Fotos</h1>
+        <button type="button" id="logout-button" class="btn btn-secondary">Sair</button>
+      </header>
+
+      <div id="photo-list-view">
+        <p id="gallery-loading" class="message info" hidden>Carregando fotos...</p>
+        <p id="gallery-error" class="message error" role="alert" hidden></p>
+        <ul id="photo-list" class="photo-list"></ul>
+      </div>
+
+      <div id="photo-detail-view" class="card photo-detail" hidden>
+        <button type="button" id="back-button" class="btn btn-secondary">Voltar à lista</button>
+        <img id="detail-image" class="detail-image" alt="">
+        <h2 id="detail-title" class="detail-title"></h2>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
